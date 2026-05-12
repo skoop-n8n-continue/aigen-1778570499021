@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Stopwatch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <div class="container">
+        <header>
+            <h1>Stopwatch</h1>
+            <button id="theme-toggle" class="icon-btn" title="Toggle Theme">🌓</button>
+        </header>
+
+        <main class="stopwatch-card">
+            <div class="display">
+                <span id="hours">00</span>:<span id="minutes">00</span>:<span id="seconds">00</span>.<span id="milliseconds">000</span>
+            </div>
+
+            <div class="controls">
+                <button id="start-btn" class="primary-btn" title="Start (Space)">▶ Start</button>
+                <button id="pause-btn" class="secondary-btn hidden" title="Pause (Space)">⏸ Pause</button>
+                <button id="lap-btn" class="accent-btn" title="Lap (L)" disabled>🚩 Lap</button>
+                <button id="reset-btn" class="danger-btn" title="Reset (R)">🔄 Reset</button>
+            </div>
+
+            <div class="actions">
+                <button id="export-btn" class="text-btn" title="Export Laps">📥 Export Laps</button>
+            </div>
+        </main>
+
+        <section class="laps-container">
+            <h3>Lap Times</h3>
+            <ul id="laps-list">
+                <!-- Laps will be added here -->
+            </ul>
+        </section>
+    </div>
+
+    <!-- Hidden audio element for lap sound -->
+    <audio id="lap-sound" src="https://assets.mixkit.co/active_storage/sfx/2568/2568-preview.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
